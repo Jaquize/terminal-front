@@ -9,4 +9,4 @@ function ThemeConditionPage(props){
     )
 }
 
-export {ThemeConditionPage}
+export default ThemeConditionPage

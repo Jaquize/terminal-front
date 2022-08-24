@@ -62,4 +62,4 @@ function StockInfoPage(props) {
     )
 }
 
-export { StockInfoPage }
+export default StockInfoPage

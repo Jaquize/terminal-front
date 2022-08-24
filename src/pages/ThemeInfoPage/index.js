@@ -31,4 +31,4 @@ function ThemeInfoPage(props){
     </StyledContainer>)
 }
 
-export {ThemeInfoPage}
+export default ThemeInfoPage

@@ -5,8 +5,8 @@ import { Col } from "../../layouts/GridLayout/Col";
 import { Grid } from "../../layouts/GridLayout/Grid";
 import { Paper } from "../../components/Paper/Paper";
 import { SelectBar } from "../../layouts/SelectBar/SelectBar";
-import { StockInfoPage } from "../StockInfoPage/StockInfoPage";
-import { ThemeInfoPage } from "../ThemeInfoPage/ThemeInfoPage";
+import StockInfoPage from "../StockInfoPage";
+import ThemeInfoPage from "../ThemeInfoPage/";
 import { Outlet } from "react-router";
 
 import styled from "styled-components";
@@ -56,4 +56,4 @@ function StockConditionPage(props) {
     )
 }
 
-export { StockConditionPage }
+export default StockConditionPage
