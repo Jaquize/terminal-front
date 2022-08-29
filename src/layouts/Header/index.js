@@ -1,10 +1,16 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
 import { HeaderContainer } from "./HeaderContainer";
+import {HeaderMenuInfo} from "./HeaderMenuInfo"
+import {HeaderMenu} from "./HeaderMenu"
 
 function Header(props){
 
-    return(<HeaderContainer>{props.children}</HeaderContainer>)
+    const [isOpen,setIsOpen] =  useState(false)
+
+    return(<HeaderContainer onMouseLeave={setIsOpen}>
+        <HeaderMenu onMouseOver={setIsOpen}/>
+        {isOpen && <HeaderMenuInfo/>}
+    </HeaderContainer>)
 }
 
 export default Header

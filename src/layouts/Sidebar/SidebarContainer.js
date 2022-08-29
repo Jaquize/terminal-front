@@ -8,7 +8,7 @@ const StyledSidebarContainer= styled.div`
     margin : 0;
     padding: 0;
     left : 0;
-    height : calc(100vh - 2.5rem);
+    height : calc(100vh - 3rem);
     background-color : #fff;
     box-shadow : 0 0.125rem 9.375rem rgb(90 97 105 / 10%), 0 0.25rem 0.5rem rgb(90 97 105 / 12%), 0 0.9375rem 1.375rem rgb(90 97 105 / 10%), 0 0.4375rem 2.1875rem rgb(165 182 201 / 10%);
     font-size : 0.8rem;

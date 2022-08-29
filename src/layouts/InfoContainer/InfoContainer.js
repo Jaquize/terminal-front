@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 
 const StyledInfoContainer = styled.div`
-    margin : 2.5rem 10px;
+    margin : 3rem 10px;
 `
 
 const StyledHeader = styled.div`
