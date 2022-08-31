@@ -23,7 +23,7 @@ function SidebarContainer(props){
 
     return(
         <StyledSidebarContainer isOpen={isOpen}>
-            <SidebarToggle toggleHandler={toggleHandler}/>
+            <SidebarToggle isOpen={isOpen} toggleHandler={toggleHandler}/>
             {isOpen &&<SidebarNav/>}
             {props.children}
         </StyledSidebarContainer>

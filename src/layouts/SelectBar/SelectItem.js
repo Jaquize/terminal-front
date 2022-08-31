@@ -10,10 +10,24 @@ const StyledItem = styled.span`
     padding : 7px 10px;
 `
 
-const StyledSelcedItem = styled(StyledItem)`
+// const StyledSelcedItem = styled(StyledItem)`
+//     background-color : #8c8c8c;
+//     opacity : 0.7;
+// `
+
+const StyledSelcedItem = styled.span`
+    display : inline-block;
+    background-color : white;
+    border : 1px solid #000000;
+    // border-radius : 0.5rem;
+    margin : 0 10px;
+    padding : 7px 10px;
     background-color : #8c8c8c;
     opacity : 0.7;
+    
 `
+
+
 
 
 function SelectItem(props){

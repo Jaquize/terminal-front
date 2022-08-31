@@ -15,7 +15,7 @@ const StyledTableRow = styled.tr`
 
 function TableRow(props){
 
-    return(<StyledTableRow onClick={() => props.onClick(props.name)}>{props.children}</StyledTableRow>)
+    return(<StyledTableRow onClick={props.onClick}>{props.children}</StyledTableRow>)
 }
 
 export {TableRow}

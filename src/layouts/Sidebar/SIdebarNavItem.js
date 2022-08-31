@@ -20,6 +20,24 @@ const StyledAppendListItem = styled(StyledListItem)`
         color : ${props => themeBox.fontColor[props.position]};
     }
 `
+const StyledListItemMain = styled.li`
+    border-bottom : 1px solid black;
+    padding: 1.5rem 0.5rem;
+    color : black;
+    font-weight : bold;
+`
+
+const StyledListItemMiddle = styled.li`
+    padding: 0.5rem 0;
+    font-weight : bold;
+`
+
+const StyledListItemLast = styled.li`
+    padding: 0.25rem 0;
+    font-weight : normal;
+    
+`
+
 const StyledSVG = styled.svg`
     width : 1.5rm;
     height: 1.5rm;
@@ -27,14 +45,30 @@ const StyledSVG = styled.svg`
 const StyledItemName = styled.div`
 `
 
-function SidebarNavItem(props){
+function SidebarNavItemMain(props){
 
     return( 
-        <StyledAppendListItem position={props.position}>
-            {/* <StyledSVG/>  */}
+        <StyledListItemMain >
             {props.children}
-        </StyledAppendListItem>
+        </StyledListItemMain>
     )
 }
 
-export {SidebarNavItem}
+function SidebarNavItemMiddle(props){
+
+    return(
+        <StyledListItemMiddle>
+            {props.children}
+        </StyledListItemMiddle>
+    )
+}
+
+function SidebarNavItemLast(props){
+    return(
+        <StyledListItemLast>
+            {props.children}
+        </StyledListItemLast>
+    )
+}
+
+export {SidebarNavItemMain,SidebarNavItemMiddle,SidebarNavItemLast}

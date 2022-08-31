@@ -11,9 +11,11 @@ const StyledInfoContainer = styled.div`
     border-radius : 10px;
     width : calc(100vw / 2.5);
     padding : 10px 15px;
+    z-index : 20000;
 `
 
 const StyledInfoItem = styled.div`
+    
     flex-basis : 33.3%;
     border-right : 1px solid rgba(255,255,255,0.7);    
     margin : 1rem;

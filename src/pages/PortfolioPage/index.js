@@ -4,6 +4,8 @@ import { Paper } from '../../components/Paper/Paper'
 import { Col } from '../../layouts/GridLayout/Col'
 import { Grid } from '../../layouts/GridLayout/Grid'
 import { Row } from '../../layouts/GridLayout/Row'
+import { PortfolioEdit } from './components/Edit/PortfolioEdit.js'
+import { PortfolioTable } from './components/Table/PortfolioTable'
 
 
 const StyledContainer = styled.div`
@@ -18,12 +20,13 @@ function PorfolioPage(props){
         <StyledContainer>
             <Grid>
                 <Row>
-                    <Col>
+                    <Col col={12}>
                         <Paper>
-
+                            <PortfolioTable/>
                         </Paper>
                     </Col>
                 </Row>
+                <PortfolioEdit/>
             </Grid>
         </StyledContainer>
     )

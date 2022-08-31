@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const StyledTableHeader = styled.thead`
     position : sticky;
-    top : 6rem;
+    top : 0;
     vertical-align : middle;
     background-color : #fff;
 

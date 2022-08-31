@@ -7,9 +7,10 @@ import { Paper } from "../../components/Paper/Paper";
 import { SelectBar } from "../../layouts/SelectBar/SelectBar";
 import StockInfoPage from "../StockInfoPage";
 import ThemeInfoPage from "../ThemeInfoPage/";
-import { Outlet } from "react-router";
 
 import styled from "styled-components";
+import { StockCondition } from "./components/StockCondition";
+import { useRouter } from "next/router";
 
 const StyledContainer = styled.div`
     width : 100%;
@@ -21,7 +22,7 @@ function StockConditionPage(props) {
 
     const [selectedItem, setSelectedItem] = useState('stock')
     const [tableItem, setTableItem] = useState("삼성전자")
-    
+
     const rowClickEventHandler = (stockName) => {
 
         if (tableItem != stockName) {
@@ -39,12 +40,12 @@ function StockConditionPage(props) {
                 <Row>
                     <Col col={6}>
                         <Paper>
-                            <Outlet context={rowClickEventHandler}/>
+                            <StockCondition onClickHandler={rowClickEventHandler}/>
                         </Paper>
                     </Col>
                     <Col col={6}>
                         <Paper>
-                            <div style={{ 'height': '100%', 'overflowY': 'auto', 'margin': '1rem 0', 'position': 'relative' }}>
+                            <div style={{ 'height': '100%', 'overflowY': 'auto', 'margin': '1rem 0'}}>
                                 <SelectBar items={['stock', 'theme']} selectedItem={selectedItem} onClick={selectEventHandler}></SelectBar>
                                 {selectedItem == 'stock' ? <StockInfoPage name={tableItem} /> : <ThemeInfoPage name={tableItem} />}
                             </div>

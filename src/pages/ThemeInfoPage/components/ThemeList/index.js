@@ -19,7 +19,7 @@ const StyledItemName = styled.div`
     
 `
 
-const StyledSubListContariner = styled.ul`
+const StyledSubListContainer = styled.ul`
     margin-left : 10px;
     margin-top : 1rem;
  
@@ -40,11 +40,11 @@ function ThemeList(props){
         <StyledListContainer>
             <StyledItem>
                 <StyledItemName onClick={toggleHandler}>제목</StyledItemName>   
-                {toggle && <StyledSubListContariner>
+                {toggle && <StyledSubListContainer>
                     <StyledSubItem>가</StyledSubItem>
                     <StyledSubItem>가</StyledSubItem>
                     <StyledSubItem>가</StyledSubItem>
-                </StyledSubListContariner>}        
+                </StyledSubListContainer>}        
             </StyledItem>
             <StyledItem><StyledItemName>가</StyledItemName></StyledItem>
             <StyledItem><StyledItemName>다</StyledItemName></StyledItem>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useOutletContext, useParams } from "react-router";
 
 import { Table } from "../../../components/Table/Table";
 import { TableBody } from "../../../components/Table/TableBody";
@@ -13,6 +12,7 @@ import { CONDITION } from "../../../query/allQuery";
 import { useLazyQuery } from "@apollo/client";
 import { SortButton } from "../../../components/SortButton/SortButton";
 import { CONDITION_BOX_LIST } from "../../../data/ConditionBoxList";
+import { useRouter } from "next/router";
 
 
 const StyledContainer = styled.div`
@@ -34,8 +34,11 @@ const StyledTitle = styled.div`
 
 function StockCondition(props) {
 
-    const condition = useParams().condition
-    const onClickEventHandler = useOutletContext()
+    const router = useRouter()
+
+    const condition = router.query.condition == undefined ? 'volumeUp' : router.query.condition[0]
+    
+    const onClickEventHandler = props.onClickHandler
 
     const [tableList, setTableList] = useState(undefined)
     const [getConditionQuery, { loading, error, data }] = useLazyQuery(CONDITION[condition]
@@ -94,7 +97,7 @@ function StockCondition(props) {
             return (
                 datas.map((valR, idxR) =>
                 (
-                    <TableRow key={idxR} name={valR.stockName} onClick={() => { onClickEventHandler(valR.stockName) }}>
+                    <TableRow key={idxR} onClick={() => { onClickEventHandler(valR.stockName) }}>
                         {dataKey.map((valC, idxK) => (
                             <TableCell key={idxK}>{valR[valC]}</TableCell>
                         ))}
@@ -106,7 +109,7 @@ function StockCondition(props) {
     }
 
     return (
-        <StyledContainer>
+        <>
             <StyledTitle>{condition}</StyledTitle>
             <ConditionBox onClick={conditionBoxOnClickHandler}/>
             <Table>
@@ -117,7 +120,7 @@ function StockCondition(props) {
                     {createTableRow(tableList)}
                 </TableBody>
             </Table>
-        </StyledContainer>
+        </>
     )
 }
 
