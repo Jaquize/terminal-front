@@ -8,4 +8,9 @@ Framework React.js, Next.js
 
 Library chartjs, react-stockcharts, apollo/client, graphql, styled-components
 
-![image](./image/first.png)
+![image](./first/first.png)
+
+![image](./image/second.png)
+
+![image](./image/thrid.png)
+
