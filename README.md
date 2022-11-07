@@ -12,5 +12,5 @@ Library chartjs, react-stockcharts, apollo/client, graphql, styled-components
 
 ![image](./image/second.png)
 
-![image](./image/thrid.png)
+![image](./image/third.png)
 
